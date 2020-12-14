@@ -36,8 +36,11 @@
 
   btn.addEventListener("click", function() {
     let random = Math.floor(Math.random() * quotes.length);
+    console.log("Random: " + random);
+    console.log("Quote: " + quotes[random].quote);
+    console.log("Author: " + quotes[random].author);
     document.getElementById("quote").textContent = quotes[random].quote;
-    document.getElementsByClassName("text-right text-capitalize author").textContent = quotes[random].author;
+    document.querySelector(".author").textContent = quotes[random].author;
 
   });
 })();
